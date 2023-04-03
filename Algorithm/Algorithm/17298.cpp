@@ -17,25 +17,20 @@ int main()
 	for (int i = 0; i < tc; i++)
 		cin >> seq[i];
 
-	st.push(-1);
-	for (int j = tc - 2; j >= 0; j--)
+	for (int i = tc - 1; i >= 0; i--)
 	{
-		st.push(-1);
-		for (int k = j + 1; k < tc; k++)
-		{
-			if (seq[j] < seq[k]) {
-				st.pop();
-				st.push(seq[k]);
-				break;
-			}
-		}
+		while (!st.empty() && seq[i] >= st.top())
+			st.pop();
+
+		if (st.empty()) output[i] = -1;
+		else output[i] = st.top();
+
+		st.push(seq[i]);
 	}
-	while (!st.empty())
-	{
-		int num = st.top();
-		st.pop();
-		cout << num << ' ';
-	}
+	
+	for (int i = 0; i < tc; i++)
+		cout << output[i] << ' ';
+
 	return 0;
 }
 
