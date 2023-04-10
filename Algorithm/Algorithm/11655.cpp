@@ -14,7 +14,7 @@ int main()
 	{
 		if (isalpha(str[i])) 
 		{
-			if (str[i] >= 'a' && str[i] < 'm' || str[i] >= 'A' && str[i] < 'M')
+			if (str[i] >= 'a' && str[i] <= 'm' || str[i] >= 'A' && str[i] <= 'M')
 				str[i] += 13;
 			else
 				str[i] -= 13;
