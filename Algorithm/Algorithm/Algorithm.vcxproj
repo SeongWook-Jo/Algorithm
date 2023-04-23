@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="10430.cpp">
+    <ClCompile Include="Programmers_연산.cpp">
       <SubType>
       </SubType>
     </ClCompile>
