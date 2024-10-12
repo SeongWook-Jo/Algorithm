@@ -4,9 +4,31 @@
 #include<vector>
 #include<stack>
 #include<queue>
-#include<cmath>
 
 using namespace std;
+
+int result = 100000;
+
+void dfs(int v, int cnt)
+{
+	if (v == 1)
+	{
+		if (result > cnt)
+			result = cnt;
+
+		return;
+	}
+
+	cnt++;
+
+	if (v % 3 == 0)
+		dfs(v/3, cnt);
+
+	if (v % 2 == 0)
+		dfs(v/2, cnt);
+
+	dfs(v - 1, cnt);
+}
 
 int main()
 {
@@ -14,20 +36,9 @@ int main()
 
 	cin >> n;
 
-	vector<int> dp(n + 1, 0);
+	dfs(n, 0);
 
-	for (int i = 2; i <= n; i++)
-	{
-		dp[i] = dp[i - 1] + 1;
-
-		if (i % 2 == 0)
-			dp[i] = min(dp[i], dp[i / 2] + 1);
-
-		if (i % 3 == 0)
-			dp[i] = min(dp[i], dp[i / 3] + 1);
-	}
-
-	cout << dp[n];
+	cout << result;
 
 	return 0;
 }
