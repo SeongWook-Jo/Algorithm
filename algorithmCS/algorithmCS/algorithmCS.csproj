@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Compile Remove="1697.cs" />
+    <Compile Remove="1764.cs" />
   </ItemGroup>
 
 </Project>
