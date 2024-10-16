@@ -13,6 +13,7 @@
     <Compile Remove="1931.cs" />
     <Compile Remove="2606.cs" />
     <Compile Remove="2630.cs" />
+    <Compile Remove="2805.cs" />
   </ItemGroup>
 
 </Project>
