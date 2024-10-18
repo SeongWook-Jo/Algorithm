@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="1238.cs" />
     <Compile Remove="1697.cs" />
     <Compile Remove="1764.cs" />
     <Compile Remove="1931.cs" />
@@ -16,6 +17,7 @@
     <Compile Remove="2805.cs" />
     <Compile Remove="7576.cs" />
     <Compile Remove="9095.cs" />
+    <Compile Remove="9095BFS.cs" />
   </ItemGroup>
 
 </Project>
